@@ -65,6 +65,7 @@ Additionally, 14 short variants were tested with different punctuation saturatio
 **Conclusion**: Punctuation effects are very minor. Marks are not a useful delivery tool in IndexTTS-2. The model does not interpret punctuation as prosodic instruction.
 
 **Script**: [`experiments/punctuation_ab.py`](experiments/punctuation_ab.py)
+**Audio**: [`audio/punctuation_ab/`](audio/punctuation_ab/) -- `punct_heavy.wav` (with punctuation) vs `punct_stripped.wav` (without) -- listen for what *should* sound different but doesn't
 
 ---
 
