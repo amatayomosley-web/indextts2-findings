@@ -60,7 +60,40 @@ Four structural rules govern delivery:
 | WITH punctuation | 10.8s | 166 |
 | WITHOUT punctuation | 9.8s | 184 |
 
-Additionally, 14 short variants were tested with different punctuation saturation levels (ellipses, quotes, semicolons, exclamations, questions). All mark types produce equivalent delivery -- no mark affects intonation differently from any other.
+The full script with all 14 punctuation saturation variants is below. Additionally, all mark types (ellipses, quotes, semicolons, exclamations, questions) produce equivalent delivery -- no mark affects intonation differently from any other.
+
+<details>
+<summary>Full punctuation test script (14 short variants)</summary>
+
+```
+WITH punctuation:
+"Does this sound natural? Or, perhaps, a bit robotic... Wait! I need to know:
+can you hear the difference between a comma, a period, and a very dramatic,
+lingering pause?"
+
+WITHOUT punctuation:
+"Does this sound natural? Or perhaps a bit robotic. Wait I need to know can
+you hear the difference between a comma a period and a very dramatic lingering
+pause?"
+
+Saturation variants (short phrases, no emotion tag):
+  p01  "But wait."
+  p02  'But... "wait"...?'
+  p03  "Just... go."
+  p04  '"Now," go! ...Go? ...Go!'
+  p05  "...Wait... Wait! ...Wait."
+  p06  '"Everything" is "fine"... Fine?'
+  p07  'Stop; wait; listen; "hear"?'
+  p08  'The "path" is "clear"? ...Clear?'
+  p09  "...Is it? Maybe. No."
+  p10  '"Success," they say, is "near"!'
+  p11  "Wait, stop, look? Really? Look..."
+  p12  'Is... "it"... really... over?'
+  p13  '"Yes." No! "Maybe..."'
+  p14  "Sigh; go; just... go."
+```
+
+</details>
 
 **Conclusion**: Punctuation effects are very minor. Marks are not a useful delivery tool in IndexTTS-2. The model does not interpret punctuation as prosodic instruction.
 
