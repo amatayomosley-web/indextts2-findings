@@ -87,6 +87,7 @@ Additionally, 14 short variants were tested with different punctuation saturatio
 **Conclusion**: [solemn] actively suppresses delivery contours regardless of text structure. [playful] preserves natural dynamics but cannot add contour that the text does not already contain. Tags and structure are independent layers -- structure controls quality, tags control character.
 
 **Script**: [`experiments/flattener_preserver.py`](experiments/flattener_preserver.py)
+**Audio**: [`audio/flattener_preserver/`](audio/flattener_preserver/) -- 4 WAV files demonstrating the tag swap
 
 ---
 
@@ -144,6 +145,7 @@ Same 35-word text with and without [sarcastic] tag:
 Tags change character (sarcastic delivery), not speed. 3 WPM difference is within noise.
 
 **Script**: [`experiments/sarcastic_tag.py`](experiments/sarcastic_tag.py)
+**Audio**: [`audio/sarcastic_tag/`](audio/sarcastic_tag/) -- with tag vs without
 
 ### Compound Tag Blending
 
