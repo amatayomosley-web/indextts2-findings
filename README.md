@@ -5,7 +5,7 @@ Controlled experiments revealing how IndexTTS-2's architecture shapes speech del
 **Model**: [IndexTTS-2](https://github.com/index-tts/index-tts) (~2.5B params, BigVGAN v2 vocoder, 22kHz)
 **Hardware**: RTX 5060 Ti 16GB, FP16
 **Voice**: Single female reference (political/analytical register)
-**Emotion control**: Mode 3 (8D vector) -- dimensions: [happy, sad, angry, surprised, scared, warm, neutral, serious]
+**Emotion control**: Mode 3 (8D vector). Dimensions: [happy, sad, angry, surprised, scared, warm, neutral, serious]
 
 ---
 
@@ -60,7 +60,7 @@ Four structural rules govern delivery:
 | WITH punctuation | 10.8s | 166 |
 | WITHOUT punctuation | 9.8s | 184 |
 
-The full script with all 14 punctuation saturation variants is below. Additionally, all mark types (ellipses, quotes, semicolons, exclamations, questions) produce equivalent delivery -- no mark affects intonation differently from any other.
+The full script with all 14 punctuation saturation variants is below. All mark types (ellipses, quotes, semicolons, exclamations, questions) produce equivalent delivery. No mark affects intonation differently from any other.
 
 <details>
 <summary>Full punctuation test script (14 short variants)</summary>
@@ -98,7 +98,7 @@ Saturation variants (short phrases, no emotion tag):
 **Conclusion**: Punctuation effects are very minor. Marks are not a useful delivery tool in IndexTTS-2. The model does not interpret punctuation as prosodic instruction.
 
 **Script**: [`experiments/punctuation_ab.py`](experiments/punctuation_ab.py)
-**Audio**: [`audio/punctuation_ab/`](audio/punctuation_ab/) -- `punct_heavy.wav` (with punctuation) vs `punct_stripped.wav` (without) -- listen for what *should* sound different but doesn't
+**Audio**: [`audio/punctuation_ab/`](audio/punctuation_ab/). `punct_heavy.wav` (with punctuation) vs `punct_stripped.wav` (without). Listen for what *should* sound different but doesn't
 
 ---
 
@@ -118,10 +118,10 @@ Saturation variants (short phrases, no emotion tag):
 | Flattener (30w) | 143 WPM, 12.6s | 174 WPM, 10.4s |
 | Preserver (34w) | 179 WPM, 11.4s | 207 WPM, 9.9s |
 
-**Conclusion**: [solemn] actively suppresses delivery contours regardless of text structure. [playful] preserves natural dynamics but cannot add contour that the text does not already contain. Tags and structure are independent layers -- structure controls quality, tags control character.
+**Conclusion**: [solemn] actively suppresses delivery contours regardless of text structure. [playful] preserves natural dynamics but cannot add contour that the text does not already contain. Tags and structure are independent layers; structure controls quality, tags control character.
 
 **Script**: [`experiments/flattener_preserver.py`](experiments/flattener_preserver.py)
-**Audio**: [`audio/flattener_preserver/`](audio/flattener_preserver/) -- 4 WAV files demonstrating the tag swap
+**Audio**: [`audio/flattener_preserver/`](audio/flattener_preserver/). 4 WAV files demonstrating the tag swap
 
 ---
 
@@ -179,7 +179,7 @@ Same 35-word text with and without [sarcastic] tag:
 Tags change character (sarcastic delivery), not speed. 3 WPM difference is within noise.
 
 **Script**: [`experiments/sarcastic_tag.py`](experiments/sarcastic_tag.py)
-**Audio**: [`audio/sarcastic_tag/`](audio/sarcastic_tag/) -- with tag vs without
+**Audio**: [`audio/sarcastic_tag/`](audio/sarcastic_tag/). With tag vs without
 
 ### Compound Tag Blending
 
@@ -253,7 +253,7 @@ All approaches to achieve 150-160 WPM were tested and failed:
 
 ## About the Experiments
 
-All experiments use the same voice reference, temperature (0.5), and maximum token budget (120). Emotion tags are applied via Mode 3 (8D vector control). Scripts in `experiments/` contain the exact test definitions (texts, variants, parameters) used to produce these results. They are reference implementations -- running them requires IndexTTS-2 model weights and the synthesis engine.
+All experiments use the same voice reference, temperature (0.5), and maximum token budget (120). Emotion tags are applied via Mode 3 (8D vector control). Scripts in `experiments/` contain the exact test definitions (texts, variants, parameters) used to produce these results. They are reference implementations. Running them requires IndexTTS-2 model weights and the synthesis engine.
 
 ---
 
